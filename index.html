@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>덕담 하나 주면 안 잡아먹지!</title>
+
+    <meta property="og:title" content="MEL님의 덕담 페이지" />
+    <meta property="og:description" content="덕담 한마디 남겨주세요!" />
+    <meta
+      property="og:image"
+      content="https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/ogimage.png"
+    />
+
+    <style>
+      @font-face {
+        font-family: "Cafe24Ssurround";
+        src: url("https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/Cafe24Ssurround.woff")
+          format("woff");
+      }
+
+      * {
+        font-family: "Cafe24Ssurround";
+      }
+
+      .background {
+        width: 100vw;
+        height: 100vh;
+
+        max-width: 450px;
+
+        background-image: url("https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/bg_default.png");
+        background-position: center;
+        background-size: cover;
+
+        margin: auto;
+
+        body,
+        h1,
+        p {
+          margin: 0;
+        }
+      }
+
+      .title {
+        color: #3f3732;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-top: 5vh;
+      }
+
+      .title > h1 {
+        font-size: 22px;
+        background-color: white;
+
+        padding: 8px 16px;
+        border-radius: 16px;
+
+        margin-bottom: 16px;
+      }
+
+      .title > p {
+        font-size: 18px;
+        margin-top: 0px;
+      }
+
+      .title > p > span {
+        font-size: 22px;
+      }
+
+      .btn {
+        background-color: #3f3732; /*위에 글자랑 같은색*/
+        color: white;
+
+        width: 300px; /*버튼박스 사이즈*/
+        height: 50px;
+        border-radius: 10px; /*모서리 둥글게*/
+
+        font-size: 18px;
+
+        /*지금 글자박스 왼쪽 위에있는거 가운데로 오게끔 - 아까 그 4줄*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        cursor: pointer; /*(pc)커서를 올리면 마우스가 손모양으로 바뀜*/
+
+        position: fixed; /*화면 움직였을때 고정*/
+        bottom: 16px; /*아래쪽에 고정시키기*/
+        /*가운데로 오게하기 - left50%만 해도 될거같지만, 기준이 가운데기 때문에 그것만 하면 오른쪽으로 치우침*/
+        left: calc(50% - 150px);
+      }
+
+      .box > img {
+        width: 70px;
+
+        position: absolute; /*아까는 fixed 사용했는데, 이건 반대*/
+        bottom: 50%; /*마찬가지로 bottom, left 위치 설정 가능*/
+        left: 50%;
+      }
+    </style>
+    <script src="https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/free_newyear_2022.js"></script>
+    <script>
+      let mycode = "fa7d444bc40ccc95b12c27f4be0873fa";
+    </script>
+  </head>
+  <body>
+    <div class="background">
+      <div class="title">
+        <h1>덕담 하나 주면 안 잡아먹지!</h1>
+        <p>MEL 님이 받은 덕담: <span>2개</span></p>
+      </div>
+      <div class="box"></div>
+      <div class="btn">바구니에 덕담 남기기</div>
+    </div>
+  </body>
+</html>
